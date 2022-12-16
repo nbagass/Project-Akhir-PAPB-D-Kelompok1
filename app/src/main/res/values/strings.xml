@@ -1,0 +1,11 @@
+<resources>
+    <string name="daftar">Daftar</string>
+    <string name="masuk">Masuk</string>
+    <string name="textLand">CookPad</string>
+    <string name="textLand2">Resep makanan dari seluruh dunia ada di sini !</string>
+    <string name="textLog">Masuk</string>
+    <string name="textLog2">Atau, masuk dengan ..</string>
+    <string name="textLog3">Anda belum memiliki akun?</string>
+    <string name="textLog4">Daftar</string>
+    <string name="app_name">Archimedes</string>
+</resources>

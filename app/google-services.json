@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1008781935161",
+    "project_id": "archimedes-8ef57",
+    "storage_bucket": "archimedes-8ef57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008781935161:android:d0666de972b06ffd3903e8",
+        "android_client_info": {
+          "package_name": "com.example.tugas_akhir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008781935161-av9d0tu4t8s3k89fqugni5pehrinrs6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8CZPrSZ4kR0UzEsdtFP5ebJjYeF3MHew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008781935161-av9d0tu4t8s3k89fqugni5pehrinrs6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/landing_logo"
+        android:layout_width="398dp"
+        android:layout_height="317dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/app_landinglogo"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/kata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/landing_logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/kata_judul"
+            android:layout_width="207dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:text="Archimedes"
+            android:textSize="34dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/kata_resep"
+            android:layout_width="212dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="@string/textLand2"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/daftar"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="207dp"
+        android:layout_marginLeft="52dp"
+        android:background="@drawable/app_daftar"
+        app:layout_constraintTop_toBottomOf="@id/kata"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/masuk"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="206dp"
+        android:layout_marginRight="52dp"
+        android:background="@drawable/app_masuk"
+        app:layout_constraintTop_toBottomOf="@id/kata"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
