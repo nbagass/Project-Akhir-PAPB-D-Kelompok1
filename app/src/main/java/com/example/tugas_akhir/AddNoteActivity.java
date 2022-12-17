@@ -19,11 +19,11 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_page);
 
-        etTitle = findViewById(R.id.isititle);
-        etDesc = findViewById(R.id.isidesc);
+        etTitle = findViewById(R.id.addpage_isititle);
+        etDesc = findViewById(R.id.addpage_isidesc);
         add = findViewById(R.id.btn_submit);
         back = findViewById(R.id.btn_kembali);
-        back2 = findViewById(R.id.btn_kembali2);
+        back2 = findViewById(R.id.addpage_back);
 
         add.setOnClickListener(this);
         back.setOnClickListener(this);
@@ -39,7 +39,7 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.btn_kembali:
                 startActivity(toHomeNote);
                 break;
-            case R.id.btn_kembali2:
+            case R.id.addpage_back:
                 startActivity(toHomeNote);
                 break;
             case R.id.btn_submit:
