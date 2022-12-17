@@ -22,13 +22,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.masuk_page);
+        setContentView(R.layout.login_page);
 
-        etEmail = findViewById(R.id.email);
-        etPassword = findViewById(R.id.pass);
-        login = findViewById(R.id.submit);
-        googleLogin = findViewById(R.id.google);
-        register = findViewById(R.id.btn_daftar);
+        etEmail = findViewById(R.id.login_email);
+        etPassword = findViewById(R.id.login_password);
+        login = findViewById(R.id.login_submit);
+        googleLogin = findViewById(R.id.login_google);
+        register = findViewById(R.id.login_daftar);
 
         login.setOnClickListener(this);
         register.setOnClickListener(this);
@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.submit:
+            case R.id.login_submit:
                 String email = etEmail.getText().toString();
                 String pass = etPassword.getText().toString();
                 
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     login (email,pass);
                 }
                 break;
-            case R.id.btn_daftar:
+            case R.id.login_daftar:
                 Intent toRegisterPage = new Intent (LoginActivity.this, RegisterActivity.class);
                 startActivity(toRegisterPage);
                 break;
