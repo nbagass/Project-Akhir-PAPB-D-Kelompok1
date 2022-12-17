@@ -56,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/title_box"
+        android:paddingLeft="17dp"
         app:layout_constraintStart_toStartOf="@+id/titletext"
         app:layout_constraintTop_toBottomOf="@id/titletext" />
 
@@ -102,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/desc_box"
+        android:paddingLeft="17dp"
         app:layout_constraintStart_toStartOf="@+id/desctext"
         app:layout_constraintTop_toBottomOf="@id/desctext" />
 
