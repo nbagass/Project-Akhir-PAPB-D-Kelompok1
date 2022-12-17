@@ -10,58 +10,59 @@
         android:id="@+id/logo"
         android:layout_width="308dp"
         android:layout_height="80dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="159dp"
         android:background="@drawable/app_masuklogo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/daftarbox"
         android:layout_width="284dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="47dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
 
         <TextView
             android:id="@+id/daftar"
             android:layout_width="66dp"
             android:layout_height="23dp"
             android:text="Daftar"
-            android:textSize="20dp"
             android:textColor="@color/black"
-            android:textStyle="bold"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="284dp"
             android:layout_height="41dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/app_emailbox"/>
+            android:background="@drawable/app_emailbox" />
 
         <EditText
             android:id="@+id/pass"
             android:layout_width="284dp"
             android:layout_height="41dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/app_passbox"/>
+            android:layout_marginTop="18dp"
+            android:background="@drawable/app_passbox" />
 
         <EditText
             android:id="@+id/user"
             android:layout_width="284dp"
             android:layout_height="39dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/app_userbox"/>
+            android:layout_marginTop="18dp"
+            android:background="@drawable/app_userbox" />
 
         <Button
             android:id="@+id/submit"
             android:layout_width="284dp"
             android:layout_height="59dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/app_btndaftar"/>
+            android:background="@drawable/app_btndaftar" />
 
     </LinearLayout>
 
@@ -69,18 +70,19 @@
         android:id="@+id/anda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/daftarbox"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daftarbox">
 
         <TextView
             android:id="@+id/andasudah"
             android:layout_width="wrap_content"
             android:layout_height="23dp"
             android:text="Anda sudah memiliki akun?"
-            android:textSize="13dp"
-            android:textColor="@color/grey"/>
+            android:textColor="@color/grey"
+            android:textSize="13dp" />
 
         <Button
             android:id="@+id/btn_masuk"
@@ -88,7 +90,7 @@
             android:layout_height="23dp"
             android:background="@color/white"
             android:hint="Masuk"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="@color/black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
