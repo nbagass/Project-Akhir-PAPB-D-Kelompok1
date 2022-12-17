@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/topbar"
+        android:id="@+id/addpage_topbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/hijau"
@@ -19,23 +19,23 @@
             android:layout_height="23.75dp"
             android:layout_marginStart="2dp"
             android:background="@drawable/btn_menu"
-            app:layout_constraintBottom_toBottomOf="@+id/hoome_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/addpage_logo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/hoome_logo" />
+            app:layout_constraintTop_toTopOf="@+id/addpage_logo" />
 
         <ImageView
-            android:id="@+id/hoome_logo"
+            android:id="@+id/addpage_logo"
             android:layout_width="122dp"
             android:layout_height="31.69dp"
             android:background="@drawable/logo_home"
-            app:layout_constraintBottom_toBottomOf="@id/topbar"
+            app:layout_constraintBottom_toBottomOf="@id/addpage_topbar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/topbar" />
+            app:layout_constraintTop_toTopOf="@id/addpage_topbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/titletext"
+        android:id="@+id/addpage_titletext"
         android:layout_width="98dp"
         android:layout_height="31dp"
         android:layout_marginLeft="25dp"
@@ -47,30 +47,30 @@
         android:fontFamily="@font/psemibold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notetext" />
+        app:layout_constraintTop_toBottomOf="@+id/addpage_textnote" />
 
     <EditText
-        android:id="@+id/isititle"
+        android:id="@+id/addpage_isititle"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/title_box"
         android:paddingLeft="17dp"
-        app:layout_constraintStart_toStartOf="@+id/titletext"
-        app:layout_constraintTop_toBottomOf="@id/titletext" />
+        app:layout_constraintStart_toStartOf="@+id/addpage_titletext"
+        app:layout_constraintTop_toBottomOf="@id/addpage_titletext" />
 
     <ImageView
-        android:id="@+id/btn_kembali2"
+        android:id="@+id/addpage_back"
         android:layout_width="31dp"
         android:layout_height="31dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/btn_back"
-        app:layout_constraintBottom_toBottomOf="@+id/notetext"
+        app:layout_constraintBottom_toBottomOf="@+id/addpage_textnote"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/notetext" />
+        app:layout_constraintTop_toTopOf="@+id/addpage_textnote" />
 
     <TextView
-        android:id="@+id/notetext"
+        android:id="@+id/addpage_textnote"
         android:layout_width="98dp"
         android:layout_height="31dp"
         android:layout_marginTop="11dp"
@@ -81,10 +81,10 @@
         android:fontFamily="@font/pbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topbar" />
+        app:layout_constraintTop_toBottomOf="@+id/addpage_topbar" />
 
     <TextView
-        android:id="@+id/desctext"
+        android:id="@+id/addpage_desctext"
         android:layout_width="127dp"
         android:layout_height="31dp"
         android:layout_marginTop="20dp"
@@ -92,18 +92,18 @@
         android:textColor="@color/hijau"
         android:textSize="20dp"
         android:fontFamily="@font/psemibold"
-        app:layout_constraintStart_toStartOf="@+id/isititle"
-        app:layout_constraintTop_toBottomOf="@id/isititle" />
+        app:layout_constraintStart_toStartOf="@+id/addpage_isititle"
+        app:layout_constraintTop_toBottomOf="@id/addpage_isititle" />
 
     <EditText
-        android:id="@+id/isidesc"
+        android:id="@+id/addpage_isidesc"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/desc_box"
         android:paddingLeft="17dp"
-        app:layout_constraintStart_toStartOf="@+id/desctext"
-        app:layout_constraintTop_toBottomOf="@id/desctext" />
+        app:layout_constraintStart_toStartOf="@+id/addpage_desctext"
+        app:layout_constraintTop_toBottomOf="@id/addpage_desctext" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_submit"
