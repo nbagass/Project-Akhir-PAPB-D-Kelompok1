@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="308dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="159dp"
+        android:background="@drawable/app_masuklogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/login_loginbox"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo">
+
+        <TextView
+            android:id="@+id/login_masuk"
+            android:layout_width="69dp"
+            android:layout_height="23dp"
+            android:text="Masuk"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/psemibold"/>
+
+        <EditText
+            android:id="@+id/login_email"
+            android:layout_width="284dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="17dp"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textSize="13dp"
+            android:fontFamily="@font/pregular"
+            android:background="@drawable/fill_box"/>
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="284dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="26dp"
+            android:paddingLeft="17dp"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textSize="13dp"
+            android:fontFamily="@font/pregular"
+            android:background="@drawable/fill_box" />
+
+        <Button
+            android:id="@+id/login_submit"
+            android:layout_width="284dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="10dp"
+            android:hint="Login"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/pbold"
+            android:background="@drawable/sub_btn" />
+
+        <TextView
+            android:id="@+id/login_atau"
+            android:layout_width="143dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="13dp"
+            android:text="Atau masuk dengan .."
+            android:textSize="13dp"
+            android:fontFamily="@font/pregular"
+            android:textColor="@color/grey" />
+
+        <Button
+            android:id="@+id/login_google"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/app_btngoogle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_loginbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_loginbox">
+
+        <TextView
+            android:id="@+id/login_anda"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:text="Anda belum memiliki akun?"
+            android:textColor="@color/grey"
+            android:textSize="13dp"
+            android:fontFamily="@font/pregular"/>
+
+        <Button
+            android:id="@+id/login_daftar"
+            android:layout_width="49.81dp"
+            android:layout_height="23dp"
+            android:background="@color/white"
+            android:hint="Daftar"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/pregular"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
