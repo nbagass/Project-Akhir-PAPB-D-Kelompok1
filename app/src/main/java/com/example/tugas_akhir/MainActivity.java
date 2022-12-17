@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.landing_page);
-        masuk = findViewById(R.id.masuk);
-        daftar = findViewById(R.id.daftar);
+        setContentView(R.layout.intro_page);
+        masuk = findViewById(R.id.login_masuk);
+        daftar = findViewById(R.id.signup_daftar);
 
         masuk.setOnClickListener(this);
         daftar.setOnClickListener(this);
@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-            case R.id.masuk:
+            case R.id.login_masuk:
                 Intent toLoginPage = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(toLoginPage);
                 break;
-            case R.id.daftar:
+            case R.id.signup_daftar:
                 Intent toRegisterPage = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(toRegisterPage);
                 break;
