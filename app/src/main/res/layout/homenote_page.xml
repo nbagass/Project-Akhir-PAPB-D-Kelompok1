@@ -7,32 +7,24 @@
 
     <LinearLayout
         android:id="@+id/gambar_home"
-        android:layout_width="428dp"
+        android:layout_width="match_parent"
         android:layout_height="255dp"
         android:background="@drawable/home_img"
         android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/topbar"/>
+        app:layout_constraintTop_toTopOf="@+id/topbar">
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topbar"
-        android:layout_width="428dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/hijau"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginRight="120dp"
-            android:background="@drawable/btn_menu"
-            app:layout_constraintBottom_toBottomOf="@id/topbar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/hoome_logo"
-            app:layout_constraintTop_toTopOf="@id/topbar" />
 
         <TextView
             android:id="@+id/hoome_logo"
@@ -43,6 +35,15 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/topbar" />
+
+        <Button
+            android:layout_width="31.25dp"
+            android:layout_height="23.75dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/btn_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/hoome_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hoome_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
