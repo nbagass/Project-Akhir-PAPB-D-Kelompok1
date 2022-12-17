@@ -26,7 +26,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/pbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/landing_logo" />
@@ -41,6 +41,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="13sp"
+        android:fontFamily="@font/pregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kata_judul" />
