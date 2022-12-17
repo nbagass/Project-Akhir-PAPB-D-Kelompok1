@@ -78,7 +78,11 @@
             android:layout_width="284dp"
             android:layout_height="59dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/app_btndaftar" />
+            android:hint="Daftar"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/pbold"
+            android:background="@drawable/sub_btn" />
 
     </LinearLayout>
 
