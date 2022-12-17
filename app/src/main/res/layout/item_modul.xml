@@ -42,8 +42,8 @@
                     android:layout_height="wrap_content"
                     android:text="Judul Modul"
                     android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/hijau" />
+                    android:textColor="@color/hijau"
+                    android:fontFamily="@font/psemibold"/>
 
                 <TextView
                     android:id="@+id/m_desc"
@@ -52,7 +52,8 @@
                     android:layout_marginTop="7dp"
                     android:text="Description Modul"
                     android:textSize="12dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/psemibold"/>
 
             </LinearLayout>
 
