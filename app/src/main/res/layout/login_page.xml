@@ -105,19 +105,19 @@
             android:id="@+id/login_anda"
             android:layout_width="wrap_content"
             android:layout_height="23dp"
+            android:fontFamily="@font/pregular"
             android:text="Anda belum memiliki akun?"
             android:textColor="@color/grey"
-            android:textSize="13dp"
-            android:fontFamily="@font/pregular"/>
+            android:textSize="13dp" />
 
         <Button
             android:id="@+id/login_daftar"
             android:layout_width="49.81dp"
             android:layout_height="23dp"
             android:background="@color/white"
+            android:fontFamily="@font/pregular"
             android:hint="Daftar"
-            android:textColorHint="@color/black"
-            android:fontFamily="@font/pregular"/>
+            android:textColorHint="@color/black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
