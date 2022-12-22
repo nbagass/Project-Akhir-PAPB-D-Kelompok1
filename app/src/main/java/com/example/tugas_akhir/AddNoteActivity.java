@@ -9,10 +9,12 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class AddNoteActivity extends AppCompatActivity implements View.OnClickListener{
     EditText etTitle, etDesc;
-    Button add, back;
-    ImageView back2;
+    FloatingActionButton add;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +24,11 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
         etTitle = findViewById(R.id.addpage_isititle);
         etDesc = findViewById(R.id.addpage_isidesc);
         add = findViewById(R.id.btn_submit);
-        back = findViewById(R.id.btn_kembali);
-        back2 = findViewById(R.id.addpage_back);
+        back = findViewById(R.id.addpage_back);
+
 
         add.setOnClickListener(this);
         back.setOnClickListener(this);
-        back2.setOnClickListener(this);
 
     }
 
@@ -36,9 +37,6 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
         Intent toHomeNote = new Intent(AddNoteActivity.this, HomeNoteActivity.class);
 
         switch (view.getId()){
-            case R.id.btn_kembali:
-                startActivity(toHomeNote);
-                break;
             case R.id.addpage_back:
                 startActivity(toHomeNote);
                 break;

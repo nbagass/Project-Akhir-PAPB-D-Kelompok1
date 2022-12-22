@@ -24,10 +24,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
 
-        etEmail = findViewById(R.id.login_email);
-        etPassword = findViewById(R.id.login_password);
-        etUsername = findViewById(R.id.user);
-        register = findViewById(R.id.login_submit);
+        etEmail = findViewById(R.id.signup_email);
+        etPassword = findViewById(R.id.signup_password);
+        etUsername = findViewById(R.id.signup_username);
+        register = findViewById(R.id.signup_submit);
         login = findViewById(R.id.signup_masuk);
 
         register.setOnClickListener(this);
@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
 
         switch (view.getId()){
-            case R.id.login_submit:
+            case R.id.signup_submit:
                 //Kurang masukin username ke database
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();

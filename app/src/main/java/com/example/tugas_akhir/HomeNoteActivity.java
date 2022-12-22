@@ -19,8 +19,8 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homenote_page);
 
-        modul = findViewById(R.id.homemod_modul);
-        addNote = findViewById(R.id.btn_addnote);
+        modul = findViewById(R.id.homenote_modul);
+        addNote = findViewById(R.id.homenote_add);
 
         modul.setOnClickListener(this);
         addNote.setOnClickListener(this);
@@ -29,11 +29,11 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.homemod_modul:
+            case R.id.homenote_modul:
                 Intent toModulHome = new Intent(HomeNoteActivity.this, HomeModulActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(toModulHome);
                 break;
-            case R.id.btn_addnote:
+            case R.id.homenote_add:
                 Intent toAddNote = new Intent(HomeNoteActivity.this, AddNoteActivity.class);
                 startActivity(toAddNote);
                 break;
