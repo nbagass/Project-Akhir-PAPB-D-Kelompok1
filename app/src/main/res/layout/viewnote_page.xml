@@ -5,114 +5,140 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/viewnotepage_topbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/hijau"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-
-            android:layout_width="31.25dp"
-            android:layout_height="23.75dp"
-            android:layout_marginStart="2dp"
-            android:background="@drawable/btn_menu"
-            app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/viewnotepage_logo" />
-
-        <ImageView
-            android:id="@+id/viewnotepage_logo"
-            android:layout_width="122dp"
-            android:layout_height="31.69dp"
-            android:background="@drawable/logo_home"
-            app:layout_constraintBottom_toBottomOf="@id/viewnotepage_topbar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/viewnotepage_topbar" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/viewnotepage_back"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/btn_back"
-        app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_textnote"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewnotepage_textnote" />
-
-    <TextView
-        android:id="@+id/viewnotepage_textnote"
-        android:layout_width="98dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="13dp"
-        android:fontFamily="@font/pbold"
-        android:text="NOTE"
-        android:textAlignment="center"
-        android:textColor="@color/hijau"
-        android:textSize="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewnotepage_topbar" />
-
-    <Button
-        android:id="@+id/viewnotepage_edit"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="12dp"
-        android:background="@drawable/btn_edit"
-        app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_textnote"
-        app:layout_constraintEnd_toStartOf="@+id/viewnotepage_delete"
-        app:layout_constraintTop_toTopOf="@+id/viewnotepage_textnote" />
-
-    <Button
-        android:id="@+id/viewnotepage_delete"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="23dp"
-        android:background="@drawable/btn_delete"
-        app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewnotepage_edit" />
-
-    <LinearLayout
-        android:id="@+id/viewnotepage_konten"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="30dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewnotepage_textnote">
-
-        <TextView
-            android:id="@+id/viewnotepage_judulnote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/psemibold"
-            android:text="Title"
-            android:textColor="@color/hijau"
-            android:textSize="32dp" />
-
-        <EditText
-            android:id="@+id/viewnotepage_isinote"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/psemibold"
-            android:text="isi Note"
-            android:textColor="@color/black"
-            android:textSize="12dp"/>
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewnotepage_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/hijau"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:layout_width="31.25dp"
+                    android:layout_height="23.75dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/btn_menu"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewnotepage_logo" />
+
+                <ImageView
+                    android:id="@+id/viewnotepage_logo"
+                    android:layout_width="122dp"
+                    android:layout_height="31.69dp"
+                    android:background="@drawable/logo_home"
+                    app:layout_constraintBottom_toBottomOf="@id/viewnotepage_topbar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/viewnotepage_topbar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp">
+
+                <ImageView
+                    android:id="@+id/viewnotepage_back"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_textnote"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewnotepage_textnote" />
+
+                <TextView
+                    android:id="@+id/viewnotepage_textnote"
+                    android:layout_width="98dp"
+                    android:layout_height="31dp"
+                    android:fontFamily="@font/pbold"
+                    android:text="NOTE"
+                    android:textAlignment="center"
+                    android:textColor="@color/hijau"
+                    android:textSize="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/viewnotepage_edit"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/btn_edit"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_textnote"
+                    app:layout_constraintEnd_toStartOf="@+id/viewnotepage_delete"
+                    app:layout_constraintTop_toTopOf="@+id/viewnotepage_textnote" />
+
+                <Button
+                    android:id="@+id/viewnotepage_delete"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/btn_delete"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewnotepage_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/viewnotepage_konten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewnotepage_textnote">
+
+                <TextView
+                    android:id="@+id/viewnotepage_judulnote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/psemibold"
+                    android:text="Title"
+                    android:textColor="@color/hijau"
+                    android:textSize="32dp" />
+
+                <EditText
+                    android:id="@+id/viewnotepage_isinote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/psemibold"
+                    android:text="isi Note"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

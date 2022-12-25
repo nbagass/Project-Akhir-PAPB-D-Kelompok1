@@ -5,107 +5,128 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/addpage_topbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/hijau"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:layout_width="31.25dp"
-            android:layout_height="23.75dp"
-            android:layout_marginStart="2dp"
-            android:background="@drawable/btn_menu"
-            app:layout_constraintBottom_toBottomOf="@+id/addpage_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/addpage_logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/addpage_logo"
-            android:layout_width="122dp"
-            android:layout_height="31.69dp"
-            android:background="@drawable/logo_home"
-            app:layout_constraintBottom_toBottomOf="@id/addpage_topbar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/addpage_topbar" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addpage_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/hijau"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/addpage_back"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/btn_back"
-        app:layout_constraintBottom_toBottomOf="@+id/addpage_textnote"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/addpage_textnote" />
+                <Button
+                    android:layout_width="31.25dp"
+                    android:layout_height="23.75dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/btn_menu"
+                    app:layout_constraintBottom_toBottomOf="@+id/addpage_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addpage_logo" />
 
-    <TextView
-        android:id="@+id/addpage_textnote"
-        android:layout_width="98dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="13dp"
-        android:fontFamily="@font/pbold"
-        android:text="NOTE"
-        android:textAlignment="center"
-        android:textColor="@color/hijau"
-        android:textSize="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addpage_topbar" />
+                <ImageView
+                    android:id="@+id/addpage_logo"
+                    android:layout_width="122dp"
+                    android:layout_height="31.69dp"
+                    android:background="@drawable/logo_home"
+                    app:layout_constraintBottom_toBottomOf="@id/addpage_topbar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/addpage_topbar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/addpage_konten"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="25dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addpage_textnote">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp">
 
-        <TextView
-            android:id="@+id/addpage_titletext"
-            android:layout_width="98dp"
-            android:layout_height="31dp"
-            android:fontFamily="@font/psemibold"
-            android:text="Title"
-            android:textColor="@color/hijau"
-            android:textSize="20dp" />
+                <ImageView
+                    android:id="@+id/addpage_back"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/addpage_textnote"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addpage_textnote"/>
 
-        <EditText
-            android:id="@+id/addpage_isititle"
-            android:layout_width="363dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/title_box"
-            android:paddingLeft="17dp" />
+                <TextView
+                    android:id="@+id/addpage_textnote"
+                    android:layout_width="98dp"
+                    android:layout_height="31dp"
+                    android:fontFamily="@font/pbold"
+                    android:text="NOTE"
+                    android:textAlignment="center"
+                    android:textColor="@color/hijau"
+                    android:textSize="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/addpage_desctext"
-            android:layout_width="127dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/psemibold"
-            android:text="Description"
-            android:textColor="@color/hijau"
-            android:textSize="20dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/addpage_isidesc"
-            android:layout_width="363dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/desc_box"
-            android:paddingLeft="17dp" />
+            <LinearLayout
+                android:id="@+id/addpage_konten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="71dp"
+                android:orientation="vertical">
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/addpage_titletext"
+                    android:layout_width="98dp"
+                    android:layout_height="31dp"
+                    android:fontFamily="@font/psemibold"
+                    android:text="Title"
+                    android:textColor="@color/hijau"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/addpage_isititle"
+                    android:layout_width="363dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/title_box"
+                    android:paddingLeft="17dp" />
+
+                <TextView
+                    android:id="@+id/addpage_desctext"
+                    android:layout_width="127dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/psemibold"
+                    android:text="Description"
+                    android:textColor="@color/hijau"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/addpage_isidesc"
+                    android:layout_width="363dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/desc_box"
+                    android:paddingLeft="17dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_submit"

@@ -5,92 +5,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/viewmodulpage_topbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/hijau"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:layout_width="31.25dp"
-            android:layout_height="23.75dp"
-            android:layout_marginStart="2dp"
-            android:background="@drawable/btn_menu"
-            app:layout_constraintBottom_toBottomOf="@+id/viewmodulpage_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/viewmodulpage_logo" />
-
-        <ImageView
-            android:id="@+id/viewmodulpage_logo"
-            android:layout_width="122dp"
-            android:layout_height="31.69dp"
-            android:background="@drawable/logo_home"
-            app:layout_constraintBottom_toBottomOf="@id/viewmodulpage_topbar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/viewmodulpage_topbar" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/viewmodulpage_back"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/btn_back"
-        app:layout_constraintBottom_toBottomOf="@+id/viewmodulpage_textmodul"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewmodulpage_textmodul" />
-
-    <TextView
-        android:id="@+id/viewmodulpage_textmodul"
-        android:layout_width="105dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="13dp"
-        android:fontFamily="@font/pbold"
-        android:text="MODUL"
-        android:textAlignment="center"
-        android:textColor="@color/hijau"
-        android:textSize="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewmodulpage_topbar" />
-
-    <LinearLayout
-        android:id="@+id/viewmodulpage_konten"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="30dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewmodulpage_textmodul">
-
-        <TextView
-            android:id="@+id/viewmodulpage_judulmodul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/psemibold"
-            android:text="Title"
-            android:textColor="@color/hijau"
-            android:textSize="32dp" />
-
-        <EditText
-            android:id="@+id/viewnotepage_isimodul"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/psemibold"
-            android:text="isi Modul"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewmodulpage_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/hijau"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:layout_width="31.25dp"
+                    android:layout_height="23.75dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/btn_menu"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewmodulpage_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewmodulpage_logo" />
+
+                <ImageView
+                    android:id="@+id/viewmodulpage_logo"
+                    android:layout_width="122dp"
+                    android:layout_height="31.69dp"
+                    android:background="@drawable/logo_home"
+                    app:layout_constraintBottom_toBottomOf="@id/viewmodulpage_topbar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/viewmodulpage_topbar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp">
+
+                <ImageView
+                    android:id="@+id/viewmodulpage_back"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewmodulpage_textmodul"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewmodulpage_textmodul" />
+
+                <TextView
+                    android:id="@+id/viewmodulpage_textmodul"
+                    android:layout_width="105dp"
+                    android:layout_height="31dp"
+                    android:fontFamily="@font/pbold"
+                    android:text="MODUL"
+                    android:textAlignment="center"
+                    android:textColor="@color/hijau"
+                    android:textSize="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/viewmodulpage_konten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewmodulpage_textmodul">
+
+                <TextView
+                    android:id="@+id/viewmodulpage_judulmodul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/psemibold"
+                    android:text="Title"
+                    android:textColor="@color/hijau"
+                    android:textSize="32dp" />
+
+                <EditText
+                    android:id="@+id/viewnotepage_isimodul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/psemibold"
+                    android:text="isi Modul"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
