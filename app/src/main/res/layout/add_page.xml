@@ -34,31 +34,6 @@
             app:layout_constraintTop_toTopOf="@id/addpage_topbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/addpage_titletext"
-        android:layout_width="98dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="305dp"
-        android:fontFamily="@font/psemibold"
-        android:text="Title"
-        android:textColor="@color/hijau"
-        android:textSize="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/addpage_back"
-        app:layout_constraintTop_toBottomOf="@+id/addpage_textnote" />
-
-    <EditText
-        android:id="@+id/addpage_isititle"
-        android:layout_width="363dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/title_box"
-        android:paddingLeft="17dp"
-        app:layout_constraintStart_toStartOf="@+id/addpage_titletext"
-        app:layout_constraintTop_toBottomOf="@id/addpage_titletext" />
-
     <ImageView
         android:id="@+id/addpage_back"
         android:layout_width="31dp"
@@ -73,37 +48,64 @@
         android:id="@+id/addpage_textnote"
         android:layout_width="98dp"
         android:layout_height="31dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/pbold"
         android:text="NOTE"
         android:textAlignment="center"
         android:textColor="@color/hijau"
         android:textSize="28dp"
-        android:fontFamily="@font/pbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addpage_topbar" />
 
-    <TextView
-        android:id="@+id/addpage_desctext"
-        android:layout_width="127dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="20dp"
-        android:text="Description"
-        android:textColor="@color/hijau"
-        android:textSize="20dp"
-        android:fontFamily="@font/psemibold"
-        app:layout_constraintStart_toStartOf="@+id/addpage_isititle"
-        app:layout_constraintTop_toBottomOf="@id/addpage_isititle" />
-
-    <EditText
-        android:id="@+id/addpage_isidesc"
-        android:layout_width="363dp"
+    <LinearLayout
+        android:id="@+id/addpage_konten"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/desc_box"
-        android:paddingLeft="17dp"
-        app:layout_constraintStart_toStartOf="@+id/addpage_desctext"
-        app:layout_constraintTop_toBottomOf="@id/addpage_desctext" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpage_textnote">
+
+        <TextView
+            android:id="@+id/addpage_titletext"
+            android:layout_width="98dp"
+            android:layout_height="31dp"
+            android:fontFamily="@font/psemibold"
+            android:text="Title"
+            android:textColor="@color/hijau"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/addpage_isititle"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/title_box"
+            android:paddingLeft="17dp" />
+
+        <TextView
+            android:id="@+id/addpage_desctext"
+            android:layout_width="127dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/psemibold"
+            android:text="Description"
+            android:textColor="@color/hijau"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/addpage_isidesc"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/desc_box"
+            android:paddingLeft="17dp" />
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_submit"
