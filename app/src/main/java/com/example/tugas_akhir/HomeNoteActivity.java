@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugas_akhir.Adapter.NoteAdapter;
+import com.example.tugas_akhir.Interface.RecyclerViewInterface;
 import com.example.tugas_akhir.Model.NoteModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeNoteActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeNoteActivity extends AppCompatActivity implements View.OnClickListener, RecyclerViewInterface {
     //Kurang initiate recycler view
     Button modul;
     FloatingActionButton addNote;
@@ -36,6 +37,7 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
     FirebaseUser user;
     NoteAdapter noteAdapter;
     ArrayList<NoteModel> noteList;
+    ArrayList<String> key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +50,7 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(HomeNoteActivity.this));
         noteList = new ArrayList<>();
-        noteAdapter = new NoteAdapter(this, noteList);
+        noteAdapter = new NoteAdapter(this, noteList, this);
         recyclerView.setAdapter(noteAdapter);
         user = FirebaseAuth.getInstance().getCurrentUser();
         userId = user.getUid();
@@ -89,4 +91,14 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
                 break;
         }
     }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent toView = new Intent(HomeNoteActivity.this, ViewNoteActivity.class);
+        toView.putExtra("TITLE",noteList.get(position).getTitle());
+        toView.putExtra("DESC",noteList.get(position).getDesc());
+        toView.putExtra("KEY",noteList.get(position).getKey());
+        startActivity(toView );
+    }
+
 }

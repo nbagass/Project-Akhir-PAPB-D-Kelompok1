@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugas_akhir.Adapter.ModulAdapter;
+import com.example.tugas_akhir.Interface.RecyclerViewInterface;
 import com.example.tugas_akhir.Model.ModulModel;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -21,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class HomeModulActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeModulActivity extends AppCompatActivity implements View.OnClickListener, RecyclerViewInterface {
     //Kurang initiate recycler view
     Button modul, note;
 
@@ -45,7 +46,7 @@ public class HomeModulActivity extends AppCompatActivity implements View.OnClick
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(HomeModulActivity.this));
         modulList = new ArrayList<>();
-        modulAdapter = new ModulAdapter(this, modulList);
+        modulAdapter = new ModulAdapter(this, modulList, this);
         recyclerView.setAdapter(modulAdapter);
         database = FirebaseDatabase.getInstance().getReference("modul");
 
@@ -75,6 +76,14 @@ public class HomeModulActivity extends AppCompatActivity implements View.OnClick
                 startActivity(toHomeNote);
                 break;
         }
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent toView = new Intent(HomeModulActivity.this, ViewModulActivity.class);
+        toView.putExtra("TITLE",modulList.get(position).getTitle());
+        toView.putExtra("DESC",modulList.get(position).getDesc());
+        startActivity(toView );
     }
 }
 

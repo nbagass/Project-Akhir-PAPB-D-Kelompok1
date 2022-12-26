@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tugas_akhir.Interface.RecyclerViewInterface;
 import com.example.tugas_akhir.Model.NoteModel;
 import com.example.tugas_akhir.R;
 
@@ -21,12 +22,13 @@ import java.util.List;
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder> {
     private Context context;
     private ArrayList<NoteModel> noteList;
+    private final RecyclerViewInterface recyclerViewInterface;
 
-    private static ClickListener clickListener;
 
-    public NoteAdapter(Context context, ArrayList<NoteModel> noteList) {
+    public NoteAdapter(Context context, ArrayList<NoteModel> noteList, RecyclerViewInterface recyclerViewInterface) {
         this.context = context;
         this.noteList = noteList;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
 
@@ -34,7 +36,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_note, parent, false);
-        return new NoteViewHolder(view);
+        return new NoteViewHolder(view, recyclerViewInterface);
 
     }
 
@@ -54,27 +56,30 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         void onItemClick(int position, View v);
     }
 
-    public class NoteViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class NoteViewHolder extends RecyclerView.ViewHolder{
         LinearLayout noteLayout;
         TextView tvTitle, tvDesc;
 
-        public NoteViewHolder(@NonNull View itemView) {
+        public NoteViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             //noteLayout = itemView.findViewById(R.id.note_layout);
             tvTitle = itemView.findViewById(R.id.n_judul);
             tvDesc = itemView.findViewById(R.id.n_desc);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if(recyclerViewInterface != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
 
-        @Override
-        public void onClick(View view) {
-            clickListener.onItemClick(getAdapterPosition(),
-                    itemView);
-        }
-
-        public void
-        setOnItemClickListener(NoteAdapter.ClickListener clickListener) {
-            NoteAdapter.clickListener = clickListener;
-        }
 
     }
 }

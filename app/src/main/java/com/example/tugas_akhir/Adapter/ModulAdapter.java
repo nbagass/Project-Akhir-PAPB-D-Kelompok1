@@ -1,6 +1,7 @@
 package com.example.tugas_akhir.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,20 +11,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tugas_akhir.HomeModulActivity;
+import com.example.tugas_akhir.Interface.RecyclerViewInterface;
 import com.example.tugas_akhir.Model.ModulModel;
 import com.example.tugas_akhir.R;
+import com.example.tugas_akhir.ViewModulActivity;
 
 import java.util.ArrayList;
 
 public class ModulAdapter extends RecyclerView.Adapter<ModulAdapter.ModulViewHolder> {
     private Context context;
     private ArrayList<ModulModel> ModulList;
+    private final RecyclerViewInterface recyclerViewInterface;
 
-    private static ClickListener clickListener;
-
-    public ModulAdapter(Context context, ArrayList<ModulModel> ModulList) {
+    public ModulAdapter(Context context, ArrayList<ModulModel> ModulList, RecyclerViewInterface recyclerViewInterface) {
         this.context = context;
         this.ModulList = ModulList;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
 
@@ -31,7 +35,7 @@ public class ModulAdapter extends RecyclerView.Adapter<ModulAdapter.ModulViewHol
     @Override
     public ModulViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_modul, parent, false);
-        return new ModulViewHolder(view);
+        return new ModulViewHolder(view, recyclerViewInterface);
 
     }
 
@@ -47,30 +51,28 @@ public class ModulAdapter extends RecyclerView.Adapter<ModulAdapter.ModulViewHol
         return ModulList.size();
     }
 
-    public interface ClickListener {
-        void onItemClick(int position, View v);
-    }
-
-    public class ModulViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ModulViewHolder extends RecyclerView.ViewHolder{
         LinearLayout ModulLayout;
         TextView tvTitle, tvDesc;
 
-        public ModulViewHolder(@NonNull View itemView) {
+        public ModulViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             //ModulLayout = itemView.findViewById(R.id.Modul_layout);
             tvTitle = itemView.findViewById(R.id.m_judul);
             tvDesc = itemView.findViewById(R.id.m_desc);
-        }
 
-        @Override
-        public void onClick(View view) {
-            clickListener.onItemClick(getAdapterPosition(),
-                    itemView);
-        }
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-        public void
-        setOnItemClickListener(ModulAdapter.ClickListener clickListener) {
-            ModulAdapter.clickListener = clickListener;
+                    if(recyclerViewInterface != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
 
     }

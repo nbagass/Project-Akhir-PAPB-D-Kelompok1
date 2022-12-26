@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp">
 
-                <ImageView
+                <Button
                     android:id="@+id/viewnotepage_back"
                     android:layout_width="31dp"
                     android:layout_height="31dp"
@@ -124,13 +124,13 @@
                     android:textColor="@color/hijau"
                     android:textSize="32dp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/viewnotepage_isinote"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/psemibold"
-                    android:text="isi Note"
+                    android:text="Descriptions"
                     android:textColor="@color/black"
                     android:textSize="12dp"/>
 

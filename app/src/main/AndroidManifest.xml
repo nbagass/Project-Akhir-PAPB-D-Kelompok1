@@ -28,6 +28,9 @@
         <activity android:name=".HomeModulActivity"></activity>
         <activity android:name=".HomeNoteActivity"></activity>
         <activity android:name=".AddNoteActivity"></activity>
+        <activity android:name=".ViewModulActivity"></activity>
+        <activity android:name=".ViewNoteActivity"></activity>
+        <activity android:name=".EditNoteActivity"></activity>
     </application>
 
 

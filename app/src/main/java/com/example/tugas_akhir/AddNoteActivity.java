@@ -70,7 +70,7 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
         String id = databaseUser.push().getKey();
         userId = user.getUid();
 
-        NoteModel note = new NoteModel(title,desc);
+        NoteModel note = new NoteModel(title,desc,id);
 
         databaseUser.child("notes").child(userId).child(id).setValue(note)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {

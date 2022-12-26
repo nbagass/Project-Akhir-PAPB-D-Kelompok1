@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/viewmodulpage_topbar"
+                android:id="@+id/editpage_topbar"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@color/hijau"
@@ -35,20 +35,19 @@
                     android:layout_height="23.75dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/btn_menu"
-                    app:layout_constraintBottom_toBottomOf="@+id/viewmodulpage_logo"
+                    app:layout_constraintBottom_toBottomOf="@+id/editpage_logo"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/viewmodulpage_logo" />
+                    app:layout_constraintTop_toTopOf="@+id/editpage_logo" />
 
                 <ImageView
-                    android:id="@+id/viewmodulpage_logo"
+                    android:id="@+id/editpage_logo"
                     android:layout_width="122dp"
                     android:layout_height="31.69dp"
                     android:background="@drawable/logo_home"
-                    app:layout_constraintBottom_toBottomOf="@id/viewmodulpage_topbar"
+                    app:layout_constraintBottom_toBottomOf="@id/editpage_topbar"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/viewmodulpage_topbar" />
-
+                    app:layout_constraintTop_toTopOf="@id/editpage_topbar" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,22 +55,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp">
 
-                <ImageView
-                    android:id="@+id/viewmodulpage_back"
+                <Button
+                    android:id="@+id/editpage_back"
                     android:layout_width="31dp"
                     android:layout_height="31dp"
                     android:layout_marginStart="20dp"
                     android:background="@drawable/btn_back"
-                    app:layout_constraintBottom_toBottomOf="@+id/viewmodulpage_textmodul"
+                    app:layout_constraintBottom_toBottomOf="@+id/editpage_textnote"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/viewmodulpage_textmodul" />
+                    app:layout_constraintTop_toTopOf="@+id/editpage_textnote"/>
 
                 <TextView
-                    android:id="@+id/viewmodulpage_textmodul"
-                    android:layout_width="105dp"
+                    android:id="@+id/editpage_textnote"
+                    android:layout_width="98dp"
                     android:layout_height="31dp"
                     android:fontFamily="@font/pbold"
-                    android:text="MODUL"
+                    android:text="NOTE"
                     android:textAlignment="center"
                     android:textColor="@color/hijau"
                     android:textSize="28dp"
@@ -82,41 +81,64 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:id="@+id/viewmodulpage_konten"
-                android:layout_width="match_parent"
+                android:id="@+id/editpage_konten"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="37dp"
-                android:layout_marginEnd="30dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/viewmodulpage_textmodul">
+                android:layout_marginTop="71dp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/viewmodulpage_judulmodul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/editpage_titletext"
+                    android:layout_width="98dp"
+                    android:layout_height="31dp"
                     android:fontFamily="@font/psemibold"
                     android:text="Title"
                     android:textColor="@color/hijau"
-                    android:textSize="32dp" />
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editpage_isititle"
+                    android:layout_width="363dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/title_box"
+                    android:paddingLeft="17dp" />
 
                 <TextView
-                    android:id="@+id/viewmodulpage_isimodul"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:id="@+id/editpage_desctext"
+                    android:layout_width="127dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/psemibold"
-                    android:text="isi Modul"
-                    android:textColor="@color/black"
-                    android:textSize="12dp" />
+                    android:text="Description"
+                    android:textColor="@color/hijau"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editpage_isidesc"
+                    android:layout_width="363dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/desc_box"
+                    android:paddingLeft="17dp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editpage_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:foregroundGravity="bottom"
+        android:backgroundTint="@color/hijau"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_submit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
