@@ -38,10 +38,13 @@
 
         <Button
             android:id="@+id/homenote_menu"
-            android:layout_width="31.25dp"
-            android:layout_height="23.75dp"
-            android:layout_marginStart="2dp"
-            android:background="@drawable/btn_menu"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/hijau"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:fontFamily="@font/psemibold"
             app:layout_constraintBottom_toBottomOf="@+id/homenote_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/homenote_logo" />

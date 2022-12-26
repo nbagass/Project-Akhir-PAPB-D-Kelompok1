@@ -30,15 +30,6 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <Button
-                    android:layout_width="31.25dp"
-                    android:layout_height="23.75dp"
-                    android:layout_marginStart="2dp"
-                    android:background="@drawable/btn_menu"
-                    app:layout_constraintBottom_toBottomOf="@+id/addpage_logo"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/addpage_logo" />
-
                 <ImageView
                     android:id="@+id/addpage_logo"
                     android:layout_width="122dp"
@@ -91,6 +82,8 @@
                     android:id="@+id/addpage_titletext"
                     android:layout_width="98dp"
                     android:layout_height="31dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/psemibold"
                     android:text="Title"
                     android:textColor="@color/hijau"
@@ -101,6 +94,8 @@
                     android:layout_width="363dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/title_box"
                     android:paddingLeft="17dp" />
 
@@ -109,6 +104,8 @@
                     android:layout_width="127dp"
                     android:layout_height="31dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/psemibold"
                     android:text="Description"
                     android:textColor="@color/hijau"
@@ -119,6 +116,8 @@
                     android:layout_width="363dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/desc_box"
                     android:paddingLeft="17dp" />
 

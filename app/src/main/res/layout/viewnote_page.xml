@@ -30,16 +30,6 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <Button
-
-                    android:layout_width="31.25dp"
-                    android:layout_height="23.75dp"
-                    android:layout_marginStart="2dp"
-                    android:background="@drawable/btn_menu"
-                    app:layout_constraintBottom_toBottomOf="@+id/viewnotepage_logo"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/viewnotepage_logo" />
-
                 <ImageView
                     android:id="@+id/viewnotepage_logo"
                     android:layout_width="122dp"
