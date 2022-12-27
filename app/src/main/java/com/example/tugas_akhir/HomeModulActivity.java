@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class HomeModulActivity extends AppCompatActivity implements View.OnClickListener, RecyclerViewInterface {
     //Kurang initiate recycler view
-    Button modul, note;
+    Button modul, note, btn_logout;
 
     RecyclerView recyclerView;
     DatabaseReference database;
@@ -33,13 +33,16 @@ public class HomeModulActivity extends AppCompatActivity implements View.OnClick
     ArrayList<ModulModel> modulList;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homemodul_page);
 
         note = findViewById(R.id.homemod_note);
+        btn_logout = findViewById(R.id.homemod_logout);
 
+        btn_logout.setOnClickListener(this);
         note.setOnClickListener(this);
 
         recyclerView = findViewById(R.id.rvModul);
@@ -74,6 +77,10 @@ public class HomeModulActivity extends AppCompatActivity implements View.OnClick
             case R.id.homemod_note:
                 Intent toHomeNote = new Intent(HomeModulActivity.this, HomeNoteActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(toHomeNote);
+                break;
+            case R.id.homemod_logout:
+                Intent toLogin = new Intent (HomeModulActivity.this, LoginActivity.class);
+                startActivity(toLogin);
                 break;
         }
     }

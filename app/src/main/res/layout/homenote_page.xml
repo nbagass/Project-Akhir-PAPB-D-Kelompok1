@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="@id/homenote_topbar" />
 
         <Button
-            android:id="@+id/homenote_menu"
+            android:id="@+id/homenote_logout"
             android:layout_width="60dp"
             android:layout_height="24dp"
             android:layout_marginStart="10dp"

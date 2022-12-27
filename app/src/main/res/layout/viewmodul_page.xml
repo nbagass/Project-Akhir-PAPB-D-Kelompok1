@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp">
 
-                <ImageView
+                <Button
                     android:id="@+id/viewmodulpage_back"
                     android:layout_width="31dp"
                     android:layout_height="31dp"

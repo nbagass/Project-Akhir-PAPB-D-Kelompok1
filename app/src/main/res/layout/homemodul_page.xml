@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/homemod_menu"
+            android:id="@+id/homemod_logout"
             android:layout_width="60dp"
             android:layout_height="24dp"
             android:layout_marginStart="10dp"

@@ -24,9 +24,10 @@
             android:padding="16dp">
 
             <ImageView
+                android:id = "@+id/n_thumbnail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/contoh_gambar"/>
+                app:srcCompat="@drawable/contoh_gambar"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

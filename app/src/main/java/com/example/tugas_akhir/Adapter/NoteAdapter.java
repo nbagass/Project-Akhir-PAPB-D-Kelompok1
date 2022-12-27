@@ -1,9 +1,11 @@
 package com.example.tugas_akhir.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tugas_akhir.Interface.RecyclerViewInterface;
 import com.example.tugas_akhir.Model.NoteModel;
 import com.example.tugas_akhir.R;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 
 import java.util.ArrayList;
@@ -23,6 +27,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     private Context context;
     private ArrayList<NoteModel> noteList;
     private final RecyclerViewInterface recyclerViewInterface;
+    StorageReference storageReference;
 
 
     public NoteAdapter(Context context, ArrayList<NoteModel> noteList, RecyclerViewInterface recyclerViewInterface) {
@@ -45,6 +50,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         NoteModel note = noteList.get(position);
         holder.tvTitle.setText(note.getTitle());
         holder.tvDesc.setText(note.getDesc());
+
     }
 
     @Override
@@ -59,12 +65,14 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     public class NoteViewHolder extends RecyclerView.ViewHolder{
         LinearLayout noteLayout;
         TextView tvTitle, tvDesc;
+        ImageView ivThumbnail;
 
         public NoteViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             //noteLayout = itemView.findViewById(R.id.note_layout);
             tvTitle = itemView.findViewById(R.id.n_judul);
             tvDesc = itemView.findViewById(R.id.n_desc);
+            ivThumbnail = itemView.findViewById(R.id.n_thumbnail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -1,6 +1,7 @@
 package com.example.tugas_akhir;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,13 +21,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class ViewNoteActivity extends AppCompatActivity implements View.OnClickListener {
     TextView etTitle, etDesc;
     Button btnBack, btnEdit, btnDelete;
     String key, userId;
+    Uri imageUri;
     DatabaseReference database;
     FirebaseUser user;
+
 
 
     @Override
@@ -36,6 +41,7 @@ public class ViewNoteActivity extends AppCompatActivity implements View.OnClickL
         String title = getIntent().getStringExtra("TITLE");
         String desc = getIntent().getStringExtra("DESC");
         key = getIntent().getStringExtra("KEY");
+        //imageUri = Uri.parse(getIntent().getStringExtra("URI"));
 
         etTitle = findViewById(R.id.viewnotepage_judulnote);
         etDesc = findViewById(R.id.viewnotepage_isinote);
@@ -67,6 +73,7 @@ public class ViewNoteActivity extends AppCompatActivity implements View.OnClickL
                 toEdit.putExtra("TITLE", etTitle.getText().toString());
                 toEdit.putExtra("DESC", etDesc.getText().toString());
                 toEdit.putExtra("KEY", key);
+                toEdit.putExtra("URI", imageUri);
                 startActivity(toEdit);
                 break;
             case R.id.viewnotepage_delete:

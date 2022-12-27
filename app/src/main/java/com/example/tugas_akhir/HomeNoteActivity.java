@@ -22,13 +22,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeNoteActivity extends AppCompatActivity implements View.OnClickListener, RecyclerViewInterface {
     //Kurang initiate recycler view
-    Button modul;
+    Button modul, btn_logout;
     FloatingActionButton addNote;
     String userId;
 
@@ -38,6 +40,7 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
     NoteAdapter noteAdapter;
     ArrayList<NoteModel> noteList;
     ArrayList<String> key;
+    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
 
         modul = findViewById(R.id.homenote_modul);
         addNote = findViewById(R.id.homenote_add);
+        btn_logout = findViewById(R.id.homenote_logout);
         recyclerView = findViewById(R.id.rvNote);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(HomeNoteActivity.this));
@@ -56,8 +60,10 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
         userId = user.getUid();
         database = FirebaseDatabase.getInstance().getReference("notes").child(userId);
 
+
         modul.setOnClickListener(this);
         addNote.setOnClickListener(this);
+        btn_logout.setOnClickListener(this);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
@@ -89,6 +95,10 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
                 Intent toAddNote = new Intent(HomeNoteActivity.this, AddNoteActivity.class);
                 startActivity(toAddNote);
                 break;
+            case R.id.homenote_logout:
+                Intent toLogin = new Intent (HomeNoteActivity.this, LoginActivity.class);
+                startActivity(toLogin);
+                break;
         }
     }
 
@@ -98,6 +108,7 @@ public class HomeNoteActivity extends AppCompatActivity implements View.OnClickL
         toView.putExtra("TITLE",noteList.get(position).getTitle());
         toView.putExtra("DESC",noteList.get(position).getDesc());
         toView.putExtra("KEY",noteList.get(position).getKey());
+        //toView.putExtra("URI",noteList.get(position).getImageUri());
         startActivity(toView );
     }
 

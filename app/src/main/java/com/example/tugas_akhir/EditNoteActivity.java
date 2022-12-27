@@ -1,6 +1,7 @@
 package com.example.tugas_akhir;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class EditNoteActivity extends AppCompatActivity implements View.OnClickListener {
     EditText etTitle, etDesc;
@@ -27,6 +30,8 @@ public class EditNoteActivity extends AppCompatActivity implements View.OnClickL
     String title, desc, key, userId;
     DatabaseReference database;
     FirebaseUser user;
+    String imageUri;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +41,7 @@ public class EditNoteActivity extends AppCompatActivity implements View.OnClickL
         title = getIntent().getStringExtra("TITLE");
         desc = getIntent().getStringExtra("DESC");
         key = getIntent().getStringExtra("KEY");
+        imageUri = getIntent().getStringExtra("URI");
 
         etTitle = findViewById(R.id.editpage_isititle);
         etDesc = findViewById(R.id.editpage_isidesc);
@@ -73,6 +79,7 @@ public class EditNoteActivity extends AppCompatActivity implements View.OnClickL
                         back.putExtra("TITLE", note.getTitle());
                         back.putExtra("DESC", note.getDesc());
                         back.putExtra("KEY", note.getKey());
+                        // back.putExtra("URI", note.getloc());
 
                         Toast.makeText(EditNoteActivity.this, "Note telah diubah", Toast.LENGTH_SHORT).show();
                         startActivity(back);
